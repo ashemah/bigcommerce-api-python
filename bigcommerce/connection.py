@@ -69,7 +69,7 @@ class Connection(object):
                 headers['Content-Type'] = 'application/json'
         log.debug("%s %s" % (method, url))
         # make and send the request
-        return self._session.request(method, url, data=data, timeout=self.timeout, headers=headers)
+        return self._session.request(method, url, data=data, timeout=self.timeout, headers=headers, verify=False)
 
     # CRUD methods
 
